@@ -18,7 +18,7 @@ public class ScriptRespawn : MonoBehaviour
     {
         float posX = Random.Range(-largura, largura);//gera um numero randomico na largura total da tela.
         Vector2 pos = new Vector2(posX, 6);// adiciona a posição que a nave vai aparecer
-        Instantiate(npc, pos, Quaternion.identity);// cria uma instancia do npc(um objeto)
+        Instantiate(npc, pos, Quaternion.identity);// cria uma instancia do npc(um objeto), quaternion.identity diz que nao vai ter rotação
 
     }
 

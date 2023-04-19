@@ -20,7 +20,7 @@ public class ScriptFundo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y < -10) //-10 pois o tamnnho da cameraSize é 5, entao eu multiplico por 2 pra pegar o tamanho da tela inteira, e jogo pra negativo pra pegar o fim de baixo da tela.
-            transform.position = new Vector2(0, 10);
+        if (transform.position.y < - 2  * Camera.main.orthographicSize) //-10 pois o tamnnho da cameraSize é 5, entao eu multiplico por 2 pra pegar o tamanho da tela inteira, e jogo pra negativo pra pegar o fim de baixo da tela.
+            transform.position = new Vector2(0, 2 * Camera.main.orthographicSize);
     }
 }

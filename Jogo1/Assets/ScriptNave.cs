@@ -53,9 +53,11 @@ public class ScriptNave : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && !ScritpCJOGO.pause)// verifica se o espaço foi apertado e se o jogo nao esta pausado, ae ele atira.
         {
 
-            Vector2 posNave = new Vector2(transform.position.x, transform.position.y + 1.2f);
+            Vector2 tiroEsquerdo = new Vector2(transform.position.x + -1.1f, transform.position.y + 0.9f);
+            Vector2 tiroDireito = new Vector2(transform.position.x + 1.1f, transform.position.y + 0.9f);
             som.Play();
-            Instantiate(tiro, posNave, Quaternion.identity);
+            Instantiate(tiro, tiroEsquerdo, Quaternion.identity);
+            Instantiate(tiro, tiroDireito, Quaternion.identity);
         }
 
     }

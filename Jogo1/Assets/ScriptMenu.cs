@@ -17,5 +17,10 @@ public class ScriptMenu : MonoBehaviour
         Application.Quit();//so funciona quando der build no jogo.
     }
 
+    public void Voltar()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
+
 
 }

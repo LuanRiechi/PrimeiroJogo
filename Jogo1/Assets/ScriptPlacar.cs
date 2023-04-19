@@ -5,7 +5,7 @@ using TMPro;
 
 public class ScriptPlacar : MonoBehaviour
 {
-    private static int placar = 0;
+    public static int placar = 0;
     public static GameObject textPlacar;
     // Start is called before the first frame update
     void Start()

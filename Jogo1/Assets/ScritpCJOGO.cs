@@ -19,12 +19,12 @@ public class ScritpCJOGO : MonoBehaviour
         {
             if (pause) {
                 Time.timeScale = 1;
-                SceneManager.UnloadScene(0);//descarrega a cena 0
+                SceneManager.UnloadSceneAsync(0);//descarrega a cena 0
             }
             else
             {
                 Time.timeScale = 0; //modifica a velocidade do jogo.
-                SceneManager.LoadScene(0, LoadSceneMode.Additive);//carrega a cena nova em adição a cena que ja existe, fica uma por cima da outra, com a de baixo pausada por caisa da velocidade = 0
+                SceneManager.LoadSceneAsync(0, LoadSceneMode.Additive);//carrega a cena nova em adição a cena que ja existe, fica uma por cima da outra, com a de baixo pausada por caisa da velocidade = 0
 
             }
             pause = !pause;

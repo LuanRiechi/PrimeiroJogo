@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScriptInimiga : MonoBehaviour
 {
@@ -16,11 +17,20 @@ public class ScriptInimiga : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)//collision é o objeto que esta colidindo com essa instancia.
     {
-        if (collision.tag.Equals("tiro"))//verifica se a colisão foi com o tiro, pela tag q defini no asset de tiro.
-            ScriptPlacar.incrementarPlacar(5);
+        //verifica se a colisão foi com o tiro, pela tag q defini no asset de tiro.
+        if (collision.tag.Equals("tiro"))
+        {
+            ScriptPlacar.incrementarPlacar(1);
+            Destroy(collision.gameObject);
+        }
 
+        if (collision.tag.Equals("Nave"))
+        {
+            ScriptPlacar.placar = 0;
+            Destroy(collision.gameObject);
+            SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
+        }
 
-        Destroy(collision.gameObject);
         Destroy(this.gameObject);
 
 

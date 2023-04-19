@@ -202,8 +202,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -100, y: -25}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -87.97958, y: -25}
+  m_SizeDelta: {x: 175.9593, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &121402406
 MonoBehaviour:
@@ -717,7 +717,7 @@ GameObject:
   - component: {fileID: 2095533307}
   m_Layer: 0
   m_Name: Nave-Star-wars
-  m_TagString: Untagged
+  m_TagString: Nave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
